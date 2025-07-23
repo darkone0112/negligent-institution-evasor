@@ -1,0 +1,9 @@
+# This file lists all dependencies required for the application
+selenium
+undetected-chromedriver
+requests
+websockets
+charset_normalizer
+certifi
+idna
+urllib3

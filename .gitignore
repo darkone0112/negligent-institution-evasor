@@ -1,0 +1,20 @@
+# Build folders
+build/
+dist/
+__pycache__/
+*.pyc
+
+# Personal data
+config.json
+
+# Environment
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
