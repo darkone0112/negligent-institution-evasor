@@ -17,7 +17,16 @@ import sys
 
 def load_config():
     try:
-        with open('config.json', 'r', encoding='utf-8') as f:
+        # Get the directory where the executable/script is located
+        if getattr(sys, 'frozen', False):
+            # If frozen (exe), use sys._MEIPASS
+            base_path = os.path.dirname(sys.executable)
+        else:
+            # If script, use script directory
+            base_path = os.path.dirname(os.path.abspath(__file__))
+        
+        config_path = os.path.join(base_path, 'config.json')
+        with open(config_path, 'r', encoding='utf-8') as f:
             config = json.load(f)
         return config['personal_info']
     except FileNotFoundError:
