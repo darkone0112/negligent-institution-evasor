@@ -1,4 +1,96 @@
-# Negligent Institution Evasor  
+# AppointmentChecker Builder
+
+This tool helps you build and configure the AppointmentChecker application into a standalone executable.
+
+## Prerequisites
+
+- Python 3.x installed
+- Access to command line/terminal
+- Internet connection (for installing dependencies)
+
+## Quick Start
+
+1. Clone this repository
+2. Run the build script:
+```bash
+python build.py
+```
+
+## Detailed Usage
+
+### First Time Setup
+
+When you run the build script for the first time or without a `config.json` file, it will:
+
+1. Launch a configuration GUI asking for:
+   - NIE (Spanish Foreigner ID Number)
+   - Name
+   - Surname
+   - Nationality
+
+2. After entering your information and clicking "Save Configuration", it will:
+   - Create a `config.json` file with your information
+   - Start building the executable
+
+### Build Process
+
+The build script will:
+
+1. Check for existing configuration
+2. Install PyInstaller if not already installed
+3. Build the executable with all required dependencies
+4. Copy the configuration file to the distribution folder
+
+### Output Files
+
+After successful build, you'll find these files in the `dist` folder:
+```
+dist/
+  ├── AppointmentChecker.exe  # The main executable
+  └── config.json             # Your configuration file
+```
+
+### Important Notes
+
+- **Always keep** `config.json` in the same folder as the executable
+- You can edit `config.json` manually if you need to change your information
+- The JSON structure must be maintained:
+```json
+{
+    "personal_info": {
+        "nie": "YOUR_NIE",
+        "name": "YOUR_NAME",
+        "surname": "YOUR_SURNAME",
+        "nationality": "YOUR_NATIONALITY"
+    }
+}
+```
+
+### Updating Configuration
+
+If you need to create a new configuration:
+1. Delete the existing `config.json`
+2. Run `python build.py` again
+3. The GUI will appear to create a new configuration
+
+### Troubleshooting
+
+1. **Missing config.json**: 
+   - The GUI will appear automatically to create one
+
+2. **Build Errors**: 
+   - Make sure you have Python installed
+   - Check your internet connection
+   - Try running `pip install pyinstaller` manually
+
+3. **Runtime Errors**:
+   - Verify `config.json` is in the same folder as the executable
+   - Check if `config.json` has the correct format
+   - Make sure all values in `config.json` are properly filled
+
+## License
+
+See the LICENSE file for details.  
 ## Automating what should never have needed automation
 **Because Spain’s Extranjería made it clear they don’t give a damn, so we automated their job.**
 
