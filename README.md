@@ -1,9 +1,9 @@
-# 🔥 Negligent Institution Evasor  
+# Negligent Institution Evasor  
 ## Automating what should never have needed automation
-**Because Spain’s Extranjería made it clear they don’t give a damn — so we automated their job.**
+**Because Spain’s Extranjería made it clear they don’t give a damn, so we automated their job.**
 
 If you’ve tried booking a NIE appointment online, you already know:  
-It’s not just broken — it’s **hostile by design**.
+It’s not just broken, it’s **hostile by design**.
 
 The official site is a Kafkaesque hellloop of dropdowns, captchas, and fake availability.  
 It gaslights you with “No appointments available” 24/7, then magically offers dozens to shady resellers and bots.
